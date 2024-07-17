@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Sheet</title>
+    <link rel="stylesheet" href="./main/style.css">
+    
+</head>
+<body>
+    <div id="main">
+
+        <h1>Student Data Sheet</h1>
+        <div id="inner">
+    <div><label for="">Enter Student Name:</label>
+        <input type="text" id="input"></div>
+    <div>
+        <label for="">Enter Age:</label>
+    <input type="number" id="Age">
+    </div>
+    <div>
+        <label for="">Select gender:</label>
+    <select name="" id="gender">
+        <option value="Select" disabled>Select gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+    </div>
+    <div>
+        <label for="">Select Course:</label>
+    <select name="course" id="select">Select 
+        <option value="select course" disabled>Select Course</option>
+        <option value="Web development">Web development</option>
+        <option value="App development">App development</option>
+        <option value="Digital Marketing">Digital Marketing</option>
+        <option value="Graphic Design">Graphic Design</option>
+        <option value="E-commerce">E-commerce</option>
+
+    </select>
+    </div>
+    <button id="btn">Add Student</button>
+        </div>
+    
+    <table>
+<thead>
+    <tr>
+        <th>S.no</th>
+        <th>Name</th>
+        <th>Rollno</th>
+        <th>Course</th>
+        <th>Age</th>
+        <th>Gender</th>
+    </tr>
+</thead>
+<tbody  id="data">
+
+</tbody>
+    </table>
+    </div>
+
+
+
+
+    <script type="module" src="main/index.js"></script>
+    <script type="module" src="main/firebase.js"></script>
+</body>
+</html>
