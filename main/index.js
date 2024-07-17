@@ -12,7 +12,7 @@ let no=0
 
 btn.addEventListener("click", async()=>{   
   let Rollno = Math.round(Math.random()*10000)
-  no++
+  ++no
   try {
 
     const docRef = await addDoc(collection(db, "Student"), {
