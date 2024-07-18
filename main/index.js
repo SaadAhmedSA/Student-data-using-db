@@ -8,7 +8,6 @@ let Course = document.getElementById("select")
 let gender = document.getElementById("gender")
 let btn = document.getElementById("btn")
 
-let no=0
 
 btn.addEventListener("click", async()=>{   
   let Rollno = Math.floor(Math.random()*9000)+1000
