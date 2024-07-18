@@ -46,9 +46,9 @@ btn.addEventListener("click", async()=>{
     querySnapshot.forEach((doc) => {
       table.innerHTML +=`
      <tr>
-      
+     
       <td>${doc.data().Student}</td>
-      <td>B-${doc.data().Rollno}</td>
+      <td>${doc.data().Rollno}</td>
       <td>${doc.data().Course}</td>
       <td>${doc.data().Age}</td>
       <td>${doc.data().gender}</td></tr>
