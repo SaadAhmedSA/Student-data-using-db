@@ -11,12 +11,13 @@ let btn = document.getElementById("btn")
 let no=0
 
 btn.addEventListener("click", async()=>{   
-  let Rollno = Math.round(Math.random()*10000)
-  no++
+  let Rollno = Math.floor(Math.random()*9000)+1000
+  console.log(Rollno);
   try {
-
+    
+    
     const docRef = await addDoc(collection(db, "Student"), {
-     serial:no,
+   
       Student:Student.value ,
       Age:Age.value ,
       gender:gender.value ,
@@ -33,21 +34,21 @@ btn.addEventListener("click", async()=>{
   Course.value=""
   gender.value=""
   Age.value=""
-})
+})  
  async function foo(){ 
 
-  
+   
   const ref = query(collection(db, "Student"),orderBy("Posttime","asc") );
   let table = document.getElementById("data")
   
   const unsubscribe = onSnapshot(ref, (querySnapshot) => {
-   table.innerHTML=""
+    table.innerHTML=""
     querySnapshot.forEach((doc) => {
       table.innerHTML +=`
      <tr>
-      <td>${doc.data().serial}</td>
+      
       <td>${doc.data().Student}</td>
-      <td>${doc.data().Rollno}</td>
+      <td>B-${doc.data().Rollno}</td>
       <td>${doc.data().Course}</td>
       <td>${doc.data().Age}</td>
       <td>${doc.data().gender}</td></tr>
